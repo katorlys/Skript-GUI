@@ -1,19 +1,20 @@
 options:
-	GUI1: GUI Name
-	GUI1-rows: 9 #how many slot do you want to create in GUI1
+	GUI1: &b&lGUI Name
+	GUI1-rows: 3 #how many slot do you want to create in GUI1
 
 command /gui:
 	permission: gui.open
-	permission message: You don't have permission to do that!
+	permission message: &7You don't have permission to do that!
 	trigger:
 		if commandsender is not player:
-			send "You must be a player!"
+			send "&7You must be a player!"
 		else:
 			set {_gui} to a new chest inventory with {@GUI1-rows} row with name "{@GUI1}"
-			set slot 4 of {_gui} to barrier
+			set slot 13 of {_gui} to barrier named "&c&lTest Menu" with lore "&r&fThis is a test menu" and "&fEdit it in gui.sk"
 			open {_gui} to player
  
 on inventory click:
 	if name of event-inventory is "{@GUI1}":
-		if index of event-slot = 4:
+		if index of event-slot = 13:
+			cancel event
 			#excute something
