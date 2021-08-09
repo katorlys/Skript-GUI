@@ -7,4 +7,4 @@ For reference only.<br>
 
 <b>Important: Requires Skript 2.3+</b><br>
 
-<img align="center" src="https://cdn.jsdelivr.net/gh/katorlys/Skript-GUI/screenshot.png"><br>
+<img align="center" src="screenshot.png"><br>
